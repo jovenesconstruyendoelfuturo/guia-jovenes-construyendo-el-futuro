@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" aria-hidden="true" role="img">
+  <defs>
+    <linearGradient id="bgGrad8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdfa"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow8" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad8)" rx="16"/>
+
+  <!-- Sol naciente en el horizonte que simboliza nueva etapa formativa -->
+  <circle cx="400" cy="380" r="140" fill="#fed7aa" opacity="0.3"/>
+  <circle cx="400" cy="380" r="90" fill="#fef08a" opacity="0.4"/>
+
+  <!-- Línea de horizonte y camino hacia el empleo -->
+  <path d="M 0,380 Q 400,340 800,380 L 800,450 L 0,450 Z" fill="#e2e8f0" opacity="0.5"/>
+  <path d="M 280,450 L 370,350 L 430,350 L 520,450 Z" fill="url(#pathGrad)" opacity="0.75"/>
+  <!-- Línea discontinua central del camino -->
+  <line x1="400" y1="355" x2="400" y2="445" stroke="#ffffff" stroke-width="4" stroke-dasharray="10,8" opacity="0.8"/>
+
+  <!-- Elemento Izquierdo: Currículum / Documentación organizada -->
+  <g filter="url(#shadow8)" transform="translate(100, 70)">
+    <rect width="240" height="250" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="0" y="0" width="240" height="40" rx="12" fill="#0284c7"/>
+    <rect x="0" y="28" width="240" height="12" fill="#0284c7"/>
+    <!-- Icono de CV / Perfil -->
+    <circle cx="28" cy="24" r="10" fill="#ffffff"/>
+    <circle cx="28" cy="21" r="4" fill="#0284c7"/>
+    <path d="M 22,29 C 22,26 34,26 34,29 Z" fill="#0284c7"/>
+    <line x1="50" y1="24" x2="160" y2="24" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Estructura del CV formativo -->
+    <!-- Foto avatar abstracto -->
+    <rect x="20" y="55" width="45" height="45" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <circle cx="42" cy="72" r="12" fill="#94a3b8"/>
+    <!-- Datos de contacto -->
+    <line x1="80" y1="65" x2="200" y2="65" stroke="#1e293b" stroke-width="2.5"/>
+    <line x1="80" y1="78" x2="170" y2="78" stroke="#64748b" stroke-width="2"/>
+    <line x1="80" y1="91" x2="150" y2="91" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Secciones: Educación / Intereses / Habilidades -->
+    <line x1="20" y1="120" x2="220" y2="120" stroke="#f1f5f9" stroke-width="2"/>
+    <rect x="20" y="132" width="80" height="10" rx="2" fill="#0284c7"/>
+    <line x1="20" y1="152" x2="190" y2="152" stroke="#64748b" stroke-width="2"/>
+    <line x1="20" y1="164" x2="160" y2="164" stroke="#94a3b8" stroke-width="2"/>
+
+    <rect x="20" y="185" width="90" height="10" rx="2" fill="#0f766e"/>
+    <g transform="translate(20, 204)">
+      <rect x="0" y="0" width="55" height="18" rx="9" fill="#e0f2fe"/>
+      <rect x="62" y="0" width="55" height="18" rx="9" fill="#ccfbf1"/>
+      <rect x="124" y="0" width="55" height="18" rx="9" fill="#fef3c7"/>
+    </g>
+  </g>
+
+  <!-- Elemento Derecho: Diálogo cordial y entrevista con el tutor -->
+  <g filter="url(#shadow8)" transform="translate(460, 70)">
+    <rect width="240" height="250" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="0" y="0" width="240" height="40" rx="12" fill="#0f766e"/>
+    <rect x="0" y="28" width="240" height="12" fill="#0f766e"/>
+    <!-- Icono de apretón de manos / entrevista cordial -->
+    <circle cx="28" cy="24" r="10" fill="#ffffff"/>
+    <path d="M 22,25 L 26,29 L 34,20" stroke="#0f766e" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <line x1="50" y1="24" x2="170" y2="24" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Burbujas de comunicación profesional -->
+    <g transform="translate(20, 60)">
+      <!-- Pregunta tutor -->
+      <rect x="0" y="0" width="160" height="42" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+      <line x1="12" y1="15" x2="140" y2="15" stroke="#0f766e" stroke-width="2"/>
+      <line x1="12" y1="27" x2="110" y2="27" stroke="#14b8a6" stroke-width="2"/>
+
+      <!-- Respuesta aprendiz -->
+      <rect x="40" y="55" width="160" height="42" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+      <line x1="52" y1="70" x2="180" y2="70" stroke="#0284c7" stroke-width="2"/>
+      <line x1="52" y1="82" x2="150" y2="82" stroke="#38bdf8" stroke-width="2"/>
+
+      <!-- Compromiso formativo acordado -->
+      <g transform="translate(10, 115)">
+        <circle cx="15" cy="15" r="14" fill="#10b981"/>
+        <path d="M 10,15 L 14,19 L 21,11" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <line x1="40" y1="12" x2="170" y2="12" stroke="#1e293b" stroke-width="2.5"/>
+        <line x1="40" y1="22" x2="145" y2="22" stroke="#64748b" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

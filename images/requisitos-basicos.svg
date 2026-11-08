@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" aria-hidden="true" role="img">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo base suave -->
+  <rect width="800" height="450" fill="url(#bgGrad1)" rx="16"/>
+
+  <!-- Patrones geométricos sutiles de fondo -->
+  <circle cx="120" cy="90" r="60" fill="#bae6fd" opacity="0.4"/>
+  <circle cx="700" cy="360" r="90" fill="#bae6fd" opacity="0.35"/>
+  <circle cx="680" cy="80" r="45" fill="#38bdf8" opacity="0.15"/>
+  <path d="M 40,380 Q 90,320 160,350 T 260,330" fill="none" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="6,6" opacity="0.5"/>
+
+  <!-- Tablero o tarjeta principal central -->
+  <g filter="url(#shadow1)">
+    <rect x="180" y="55" width="440" height="340" rx="14" fill="url(#cardGrad1)" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Cabecera del tablero -->
+    <rect x="180" y="55" width="440" height="64" rx="14" fill="#0284c7"/>
+    <rect x="180" y="105" width="440" height="14" fill="#0284c7"/>
+
+    <!-- Clip superior decorativo de carpeta/clipboard -->
+    <rect x="350" y="42" width="100" height="26" rx="6" fill="#0369a1"/>
+    <rect x="385" y="49" width="30" height="12" rx="3" fill="#e0f2fe"/>
+
+    <!-- Iconos simbólicos abstractos en cabecera -->
+    <circle cx="230" cy="87" r="14" fill="#ffffff" opacity="0.9"/>
+    <path d="M 224,87 L 228,91 L 236,83" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="260" y="80" width="160" height="14" rx="4" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- Elemento de verificación 1: Rango de edad (18-29) -->
+  <g transform="translate(215, 145)">
+    <rect width="370" height="68" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <!-- Círculo de estado con check -->
+    <circle cx="40" cy="34" r="18" fill="#10b981"/>
+    <path d="M 33,34 L 38,39 L 47,29" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Líneas abstractas que representan criterio -->
+    <rect x="74" y="22" width="140" height="12" rx="3" fill="#1e293b"/>
+    <rect x="74" y="40" width="210" height="8" rx="2" fill="#64748b"/>
+    <!-- Elemento gráfico de indicador de edad / barra -->
+    <rect x="300" y="26" width="50" height="16" rx="4" fill="#dbeafe"/>
+    <circle cx="315" cy="34" r="4" fill="#0284c7"/>
+    <circle cx="335" cy="34" r="4" fill="#0284c7"/>
+  </g>
+
+  <!-- Elemento de verificación 2: No estudiar actualmente -->
+  <g transform="translate(215, 225)">
+    <rect width="370" height="68" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <!-- Círculo de estado -->
+    <circle cx="40" cy="34" r="18" fill="#10b981"/>
+    <path d="M 33,34 L 38,39 L 47,29" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Representación gráfica abstracta -->
+    <rect x="74" y="22" width="160" height="12" rx="3" fill="#1e293b"/>
+    <rect x="74" y="40" width="180" height="8" rx="2" fill="#64748b"/>
+    <!-- Icono abstracto de libro/birrete neutro -->
+    <path d="M 310,34 L 325,26 L 340,34 L 325,41 Z" fill="#0284c7" opacity="0.8"/>
+  </g>
+
+  <!-- Elemento de verificación 3: No trabajar actualmente -->
+  <g transform="translate(215, 305)">
+    <rect width="370" height="68" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <!-- Círculo de estado -->
+    <circle cx="40" cy="34" r="18" fill="#10b981"/>
+    <path d="M 33,34 L 38,39 L 47,29" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Representación gráfica abstracta -->
+    <rect x="74" y="22" width="150" height="12" rx="3" fill="#1e293b"/>
+    <rect x="74" y="40" width="195" height="8" rx="2" fill="#64748b"/>
+    <!-- Icono abstracto de maletín de trabajo neutro -->
+    <rect x="312" y="28" width="26" height="18" rx="3" fill="#0284c7" opacity="0.8"/>
+    <path d="M 320,28 L 320,24 Q 320,22 322,22 L 328,22 Q 330,22 330,24 L 330,28" fill="none" stroke="#0284c7" stroke-width="2"/>
+  </g>
+
+  <!-- Siluetas decorativas laterales flotantes -->
+  <g transform="translate(640, 180)" opacity="0.85">
+    <circle cx="40" cy="40" r="35" fill="#e0f2fe"/>
+    <circle cx="40" cy="30" r="12" fill="#0284c7"/>
+    <path d="M 20,58 C 20,46 30,44 40,44 C 50,44 60,46 60,58 Z" fill="#0284c7"/>
+  </g>
+
+  <g transform="translate(80, 220)" opacity="0.85">
+    <rect width="64" height="64" rx="12" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+    <path d="M 20,32 L 28,40 L 44,24" fill="none" stroke="#0f766e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

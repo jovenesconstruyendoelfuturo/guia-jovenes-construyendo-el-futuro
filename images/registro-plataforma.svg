@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" aria-hidden="true" role="img">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad3)" rx="16"/>
+
+  <!-- Adornos abstractos geométricos en el fondo -->
+  <circle cx="100" cy="120" r="70" fill="#38bdf8" opacity="0.15"/>
+  <circle cx="710" cy="160" r="50" fill="#0f766e" opacity="0.12"/>
+  <circle cx="680" cy="340" r="80" fill="#0284c7" opacity="0.1"/>
+
+  <!-- Laptop grande en perspectiva frontal -->
+  <g filter="url(#shadow3)" transform="translate(140, 45)">
+    <!-- Marco de la pantalla -->
+    <rect x="0" y="0" width="520" height="310" rx="14" fill="#1e293b"/>
+    <!-- Cámara web diminuta -->
+    <circle cx="260" cy="8" r="3" fill="#64748b"/>
+
+    <!-- Pantalla LCD -->
+    <rect x="14" y="16" width="492" height="280" rx="6" fill="url(#screenGrad)"/>
+
+    <!-- Barra de navegación del navegador mockup -->
+    <rect x="14" y="16" width="492" height="36" fill="#f1f5f9" rx="6"/>
+    <rect x="14" y="46" width="492" height="6" fill="#e2e8f0"/>
+    <!-- Botones de ventana -->
+    <circle cx="34" cy="34" r="5" fill="#f87171"/>
+    <circle cx="48" cy="34" r="5" fill="#fbbf24"/>
+    <circle cx="62" cy="34" r="5" fill="#4ade80"/>
+    <!-- Barra de dirección / candado -->
+    <rect x="90" y="24" width="280" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="105" cy="34" r="4" fill="#0284c7"/>
+    <line x1="120" y1="34" x2="250" y2="34" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Contenido de la plataforma: Flujo de pasos de registro -->
+    <!-- Indicador de pasos 1, 2, 3, 4 -->
+    <g transform="translate(50, 70)">
+      <!-- Línea conectora de pasos -->
+      <line x1="40" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="3"/>
+      <line x1="40" y1="20" x2="150" y2="20" stroke="#0284c7" stroke-width="3"/>
+
+      <!-- Paso 1: Completado -->
+      <circle cx="40" cy="20" r="14" fill="#10b981"/>
+      <path d="M 35,20 L 38,23 L 45,17" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Paso 2: Activo -->
+      <circle cx="150" cy="20" r="15" fill="#0284c7"/>
+      <circle cx="150" cy="20" r="6" fill="#ffffff"/>
+
+      <!-- Paso 3: Pendiente -->
+      <circle cx="265" cy="20" r="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+      <circle cx="265" cy="20" r="4" fill="#94a3b8"/>
+
+      <!-- Paso 4: Pendiente -->
+      <circle cx="380" cy="20" r="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+      <circle cx="380" cy="20" r="4" fill="#94a3b8"/>
+    </g>
+
+    <!-- Formulario / interfaz dentro de la pantalla -->
+    <g transform="translate(50, 125)">
+      <!-- Columna izquierda: datos del aspirante -->
+      <rect x="15" y="0" width="180" height="28" rx="4" fill="#f8fafc" stroke="#cbd5e1"/>
+      <line x1="25" y1="14" x2="90" y2="14" stroke="#64748b" stroke-width="2.5"/>
+
+      <rect x="15" y="38" width="180" height="28" rx="4" fill="#f8fafc" stroke="#cbd5e1"/>
+      <line x1="25" y1="52" x2="120" y2="52" stroke="#64748b" stroke-width="2.5"/>
+
+      <rect x="15" y="76" width="180" height="28" rx="4" fill="#f8fafc" stroke="#cbd5e1"/>
+      <line x1="25" y1="90" x2="80" y2="90" stroke="#64748b" stroke-width="2.5"/>
+
+      <rect x="15" y="115" width="110" height="26" rx="4" fill="#0284c7"/>
+      <line x1="30" y1="128" x2="95" y2="128" stroke="#ffffff" stroke-width="2.5"/>
+
+      <!-- Columna derecha: carga de archivo / verificación -->
+      <g transform="translate(225, 0)">
+        <rect x="0" y="0" width="175" height="104" rx="6" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <!-- Icono de documento con check -->
+        <rect x="68" y="22" width="38" height="46" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+        <line x1="76" y1="34" x2="98" y2="34" stroke="#94a3b8" stroke-width="2"/>
+        <line x1="76" y1="42" x2="94" y2="42" stroke="#94a3b8" stroke-width="2"/>
+        <circle cx="95" cy="58" r="8" fill="#10b981"/>
+        <path d="M 92,58 L 94,60 L 98,56" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="30" y1="84" x2="145" y2="84" stroke="#0369a1" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- Base y teclado de la laptop -->
+    <polygon points="-60,310 580,310 610,328 -90,328" fill="#cbd5e1"/>
+    <rect x="220" y="312" width="80" height="6" rx="3" fill="#94a3b8"/>
+  </g>
+</svg>
