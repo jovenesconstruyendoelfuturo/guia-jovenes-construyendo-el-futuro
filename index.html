@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador de Requisitos - Jóvenes Construyendo el Futuro</title>
+  <meta name="description" content="Comprueba si cumples los requisitos básicos por edad y ocupación para Jóvenes Construyendo el Futuro con esta herramienta informativa y guía paso a paso.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jovenesconstruyendoelfuturo.github.io/guia-jovenes-construyendo-el-futuro/">
+
+  <!-- Metadatos Open Graph para redes sociales -->
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Verificador de Requisitos - Jóvenes Construyendo el Futuro">
+  <meta property="og:description" content="Comprueba si cumples los requisitos básicos por edad y ocupación para Jóvenes Construyendo el Futuro con esta herramienta informativa y guía paso a paso.">
+  <meta property="og:url" content="https://jovenesconstruyendoelfuturo.github.io/guia-jovenes-construyendo-el-futuro/">
+  <meta property="og:site_name" content="Guía Independiente de Jóvenes Construyendo el Futuro">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Aviso Legal Superior Obligatorio -->
+  <aside class="disclaimer-banner disclaimer-top" role="complementary" aria-label="Aviso legal inicial">
+    <div class="container">
+      <div class="disclaimer-content">
+        <svg class="disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <p><strong>Aviso importante:</strong> Este sitio es una guía informativa independiente. No es el sitio oficial del programa ni pertenece al Gobierno de México ni a la STPS. La plataforma oficial es: <a href="https://jovenesconstruyendoelfuturo.stps.gob.mx/" target="_blank" rel="noopener noreferrer">jovenesconstruyendoelfuturo.stps.gob.mx</a></p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Encabezado Principal -->
+  <header class="site-header">
+    <div class="container">
+      <span class="badge-tag">Herramienta Orientativa Gratuita</span>
+      <h1>Verificador de Requisitos Básicos de Jóvenes Construyendo el Futuro</h1>
+      <p class="lead">Consulta en segundos si tu perfil cumple con las condiciones iniciales de edad y ocupación para postularte como aprendiz.</p>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="site-main">
+    <div class="container">
+
+      <!-- Herramienta Interactiva -->
+      <section class="content-card tool-card" id="herramienta-verificador" aria-labelledby="titulo-verificador">
+        <h2 id="titulo-verificador">Comprueba tu elegibilidad básica</h2>
+        <p class="tool-intro">Ingresa tu edad actual y responde a las dos preguntas de situación ocupacional. Obtendrás un diagnóstico general e informativo de manera inmediata.</p>
+
+        <form id="form-verificador" novalidate>
+          <div class="form-group">
+            <label for="edad" class="form-label">1. ¿Cuál es tu edad actual (años cumplidos)?</label>
+            <input type="number" id="edad" name="edad" class="form-input" min="1" max="110" placeholder="Ejemplo: 22" required>
+            <span class="form-hint">Ingresa tu edad en números enteros (debes tener al menos 18 años).</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">2. ¿Te encuentras estudiando actualmente en algún sistema escolarizado?</label>
+            <div class="radio-group" role="radiogroup" aria-label="Pregunta sobre estudios actuales">
+              <label class="radio-label" for="estudia-no">
+                <input type="radio" id="estudia-no" name="estudia" value="no" required> No estudio
+              </label>
+              <label class="radio-label" for="estudia-si">
+                <input type="radio" id="estudia-si" name="estudia" value="si" required> Sí estoy estudiando
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">3. ¿Tienes actualmente algún empleo remunerado o actividad laboral formal?</label>
+            <div class="radio-group" role="radiogroup" aria-label="Pregunta sobre empleo actual">
+              <label class="radio-label" for="trabaja-no">
+                <input type="radio" id="trabaja-no" name="trabaja" value="no" required> No trabajo
+              </label>
+              <label class="radio-label" for="trabaja-si">
+                <input type="radio" id="trabaja-si" name="trabaja" value="si" required> Sí trabajo
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="btn-comprobar">Comprobar requisitos</button>
+            <button type="button" class="btn btn-secondary" id="btn-limpiar">Restablecer formulario</button>
+          </div>
+        </form>
+
+        <div id="resultado" class="resultado-box" aria-live="polite" hidden></div>
+      </section>
+
+      <!-- Guía Explicativa Detallada -->
+      <article class="content-card" id="guia-programa" aria-labelledby="titulo-guia">
+        <h2 id="titulo-guia">¿Qué es Jóvenes Construyendo el Futuro y cómo funciona el programa?</h2>
+        <div class="explainer-text">
+          <p>
+            Jóvenes Construyendo el Futuro es un programa del Gobierno de México orientado a impulsar la inclusión laboral y el desarrollo de habilidades profesionales entre las nuevas generaciones. Su propósito fundamental radica en vincular a personas de entre 18 y 29 años de edad que no cuenten con empleo y que actualmente no se encuentren matriculadas en el sistema educativo escolarizado con unidades productivas denominadas centros de trabajo. Estos espacios formativos pueden ser empresas de diversos tamaños, talleres artesanales, organizaciones de la sociedad civil o pequeños negocios locales.
+          </p>
+
+          <h3>¿A quiénes está dirigida esta iniciativa formativa?</h3>
+          <p>
+            La convocatoria está pensada específicamente para jóvenes que buscan integrarse por primera vez al mercado formal o que necesitan adquirir competencias prácticas para elevar su empleabilidad. No se exige un grado académico específico de inicio, por lo que pueden participar aspirantes con diferentes niveles de instrucción escolar. El elemento primordial es que la persona no desempeñe actividades laborales remuneradas ni mantenga una matrícula activa en centros educativos al momento de iniciar su proceso de capacitación.
+          </p>
+
+          <h3>¿Cómo se desarrolla el proceso general de registro y vinculación?</h3>
+          <p>
+            El procedimiento se realiza de manera enteramente digital a través de la plataforma en línea. Cada aspirante debe registrar su Clave Única de Registro de Población (CURP), capturar sus datos de contacto y cargar en formato digital su identificación oficial con fotografía y un comprobante de domicilio reciente. Una vez completado el expediente, el usuario puede explorar las áreas de interés y los planes de formación disponibles en su municipio o colonia. Al seleccionar una opción afín, se agenda un primer acercamiento o entrevista con el tutor. Tras ser aceptado, comienza la capacitación con una duración de hasta 12 meses, recibiendo mensualmente un apoyo económico directo y cobertura médica ante el Instituto Mexicano del Seguro Social. Para consultar calendarios de dispersión y montos asignados, confirma los datos vigentes en el sitio oficial.
+          </p>
+
+          <h3>¿Cómo recuperar el acceso a tu cuenta en la plataforma?</h3>
+          <p>
+            Si has olvidado tu contraseña o presentas problemas para acceder a tu perfil, la plataforma digital dispone de un apartado de recuperación. En la pantalla inicial de inicio de sesión se encuentra la alternativa para solicitar el restablecimiento mediante el correo electrónico o el número celular que validaste en tu alta. En caso de haber perdido el acceso al correo o teléfono registrado, la STPS organiza periódicamente módulos de atención presencial y oficinas móviles donde personal autorizado brinda apoyo directo con la acreditación de tu identidad, sin requerir terceras personas ni costo alguno.
+          </p>
+
+          <h3>Consejos esenciales para evitar páginas apócrifas y fraudes</h3>
+          <p>
+            Para proteger tu integridad y tu información personal, es fundamental desconfiar de páginas web o grupos en redes sociales que ofrezcan registros exprés, cupos garantizados o adelanto de pagos a cambio de dinero. Todos los trámites del programa son enteramente gratuitos y personales. Revisa con detenimiento que la barra de direcciones de tu navegador muestre exclusivamente el dominio oficial del gobierno mexicano.
+          </p>
+
+          <p class="external-guide-notice">
+            Para profundizar en cada paso de la convocatoria, resolver dudas frecuentes y obtener recomendaciones prácticas para preparar tu postulación, visita la <a href="https://jovenesconstruyendoelfuturoguia.com.mx/">guía informativa independiente de Jóvenes Construyendo el Futuro</a>.
+          </p>
+        </div>
+      </article>
+
+      <!-- Preguntas Frecuentes (FAQ) -->
+      <section class="content-card" id="preguntas-frecuentes" aria-labelledby="titulo-faq">
+        <h2 id="titulo-faq">Preguntas frecuentes sobre los requisitos y el programa</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>1. ¿El trámite de registro en Jóvenes Construyendo el Futuro tiene algún costo?</h3>
+            <p>No. El registro, la postulación y todas las gestiones vinculadas al programa son completamente gratuitos y de carácter personal. En ningún caso debes pagar a terceras personas, gestores o intermediarios para agilizar tu trámite o conseguir una vacante. Confirma los datos vigentes en el sitio oficial.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>2. ¿Cuál es la duración del periodo de capacitación laboral?</h3>
+            <p>La permanencia máxima en el programa es de hasta 12 meses ininterrumpidos en el centro de trabajo seleccionado. Durante este lapso, el aprendiz y el tutor realizan valoraciones mensuales para dar seguimiento al aprendizaje y desempeño mutuo. Confirma los datos vigentes en el sitio oficial.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>3. ¿Qué apoyos y coberturas reciben las personas inscritas?</h3>
+            <p>Las y los jóvenes vinculados reciben un apoyo económico mensual entregado de manera directa sin retenciones, además de incorporación al régimen del Instituto Mexicano del Seguro Social (IMSS) para cobertura médica ante enfermedades no profesionales, maternidad y riesgos laborales durante el tiempo de capacitación. Para conocer montos y esquemas de pago, confirma los datos vigentes en el sitio oficial.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>4. ¿Qué requisitos debo cumplir si recientemente dejé de estudiar o trabajar?</h3>
+            <p>Para postularte, es indispensable que al momento de solicitar tu registro no estés inscrito en ningún plan de estudios escolarizado ni realices un empleo formal o informal con remuneración. Asimismo, debes tener entre 18 y 29 años cumplidos y contar con tu documentación básica en regla. Confirma los datos vigentes en el sitio oficial.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>5. ¿Es posible solicitar una segunda vinculación o cambiar de centro de trabajo?</h3>
+            <p>Sí, los lineamientos del programa contemplan supuestos para solicitar una desvinculación justificada o cambio de centro formativo, siempre que se cumpla con los plazos y condiciones establecidos por la normatividad de la STPS. Para revisar las causas autorizadas y los pasos a seguir en la plataforma, confirma los datos vigentes en el sitio oficial.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Prevención de Fraudes -->
+      <section class="content-card fraud-card" id="prevencion-fraudes" aria-labelledby="titulo-fraude">
+        <h2 id="titulo-fraude">Medidas indispensables para la prevención de fraudes</h2>
+        <div class="fraud-alert-box">
+          <p>Alerta: Protégete de gestores fraudulentos y de sitios apócrifos que buscan obtener tus datos personales o cobrar cuotas indebidas.</p>
+        </div>
+        <ul class="security-points">
+          <li><strong>Dominio oficial único:</strong> La única plataforma digital autorizada para tramitar, vincularse y consultar información oficial es <a href="https://jovenesconstruyendoelfuturo.stps.gob.mx/" target="_blank" rel="noopener noreferrer">https://jovenesconstruyendoelfuturo.stps.gob.mx/</a>. Desconfía de portales con terminaciones comerciales que pretendan solicitarte cobros.</li>
+          <li><strong>Confidencialidad absoluta de contraseñas:</strong> Jamás entregues tu contraseña de acceso, usuario, Clave Única de Registro de Población (CURP) ni códigos recibidos por SMS a terceros, empleadores o grupos de redes sociales.</li>
+          <li><strong>Gratuidad garantizada en todo el país:</strong> Absolutamente todos los trámites del programa son gratuitos. Ningún intermediario, centro de trabajo ni funcionario está autorizado a cobrar por asignarte un cupo o gestionar tu beca.</li>
+          <li><strong>Trámite directo y personal:</strong> Realiza tu registro de manera autónoma. La vinculación no requiere gestores externos ni favores políticos.</li>
+          <li><strong>Verificación continua:</strong> Ante cualquier duda, anomalía o cobro indebido, acude a los canales oficiales de contacto y confirma los datos vigentes en el sitio oficial.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Aviso Legal Inferior Obligatorio -->
+  <aside class="disclaimer-banner disclaimer-bottom" role="complementary" aria-label="Aviso legal final">
+    <div class="container">
+      <div class="disclaimer-content">
+        <svg class="disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <p><strong>Aviso importante:</strong> Este sitio es una guía informativa independiente. No es el sitio oficial del programa ni pertenece al Gobierno de México ni a la STPS. La plataforma oficial es: <a href="https://jovenesconstruyendoelfuturo.stps.gob.mx/" target="_blank" rel="noopener noreferrer">jovenesconstruyendoelfuturo.stps.gob.mx</a></p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Herramienta y guía informativa de consulta ciudadana sobre Jóvenes Construyendo el Futuro.</p>
+      <p>Página de orientación sin fines oficiales. Para trámites y consultas formales, visita el portal institucional: <a href="https://jovenesconstruyendoelfuturo.stps.gob.mx/" target="_blank" rel="noopener noreferrer">jovenesconstruyendoelfuturo.stps.gob.mx</a></p>
+    </div>
+  </footer>
+
+  <!-- Script Vanilla JavaScript sin librerías externas -->
+  <script>
+    (function() {
+      'use strict';
+
+      var form = document.getElementById('form-verificador');
+      var edadInput = document.getElementById('edad');
+      var resultadoBox = document.getElementById('resultado');
+      var btnLimpiar = document.getElementById('btn-limpiar');
+
+      if (!form || !edadInput || !resultadoBox) return;
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var edadVal = parseInt(edadInput.value.trim(), 10);
+        var estudiaEl = document.querySelector('input[name="estudia"]:checked');
+        var trabajaEl = document.querySelector('input[name="trabaja"]:checked');
+
+        if (isNaN(edadVal) || edadVal <= 0) {
+          mostrarResultado('atencion', 'Por favor, ingresa una edad válida en años cumplidos.', 'Escribe tu edad numérica en el primer campo para poder realizar la comprobación orientativa.');
+          edadInput.focus();
+          return;
+        }
+
+        if (!estudiaEl) {
+          mostrarResultado('atencion', 'Falta responder la pregunta sobre estudios.', 'Indica si actualmente te encuentras cursando estudios escolarizados seleccionando Sí o No.');
+          return;
+        }
+
+        if (!trabajaEl) {
+          mostrarResultado('atencion', 'Falta responder la pregunta sobre empleo.', 'Indica si actualmente cuentas con un empleo formal o remunerado seleccionando Sí o No.');
+          return;
+        }
+
+        var estudia = estudiaEl.value;
+        var trabaja = trabajaEl.value;
+
+        // Evaluación de reglas de requisitos
+        if (edadVal < 18) {
+          mostrarResultado('no-cumple',
+            'No cumples con el requisito mínimo de edad',
+            'El programa Jóvenes Construyendo el Futuro está dirigido exclusivamente a personas a partir de los 18 años cumplidos. Si estás próximo a cumplirlos, te sugerimos esperar y preparar con anticipación tus documentos oficiales (CURP, identificación y comprobante de domicilio). Recuerda que este resultado es meramente orientativo; confirma los datos vigentes en el sitio oficial.');
+        } else if (edadVal > 29) {
+          mostrarResultado('no-cumple',
+            'Superas el límite de edad del programa',
+            'El rango de edad legalmente establecido para participar comprende de los 18 hasta los 29 años cumplidos al momento del registro. Si superas este límite, te recomendamos consultar otras opciones de capacitación y fomento al empleo coordinadas por el Servicio Nacional de Empleo y la STPS. Este resultado es meramente orientativo; confirma los datos vigentes en el sitio oficial.');
+        } else if (estudia === 'si' && trabaja === 'si') {
+          mostrarResultado('atencion',
+            'Condición de ocupación actual no coincidente',
+            'Uno de los pilares del programa es apoyar a jóvenes que en este momento no cuenten con empleo y que tampoco se encuentren estudiando. Al manifestar que estudias y trabajas, tu situación no coincide con las bases de la convocatoria. Si tu estatus cambia en el futuro, confirma los datos vigentes en el sitio oficial.');
+        } else if (estudia === 'si') {
+          mostrarResultado('atencion',
+            'Actualmente te encuentras cursando estudios',
+            'El esquema de formación en centros de trabajo requiere disponibilidad presencial y está dirigido a jóvenes fuera del sistema educativo escolarizado. Si estás cerca de concluir tus estudios o graduarte, podrás postularte una vez que ya no tengas matrícula activa. Ten en cuenta que este resultado es meramente orientativo; confirma los datos vigentes en el sitio oficial.');
+        } else if (trabaja === 'si') {
+          mostrarResultado('atencion',
+            'Actualmente cuentas con empleo remunerado',
+            'El programa tiene como objetivo brindar una oportunidad de vinculación a quienes carecen de un empleo formal o remunerado. Al encontrarte trabajando actualmente, no reúnes el criterio de ocupación requerido. Si en algún momento tu condición laboral cambia, confirma los datos vigentes en el sitio oficial.');
+        } else {
+          // edadVal entre 18 y 29, no estudia y no trabaja
+          mostrarResultado('cumple',
+            '¡Aparentemente cumples con el perfil básico inicial!',
+            'Cumples con los tres criterios fundamentales de ingreso: tienes entre 18 y 29 años cumplidos y no estás estudiando ni trabajando en este momento. Ten presente que este resultado es exclusivamente orientativo y no garantiza la aceptación o asignación de una vacante. Para continuar tu proceso, deberás contar con tu documentación oficial en regla y formalizar tu registro de manera directa en la plataforma autorizada. Confirma los datos vigentes en el sitio oficial antes de iniciar cualquier trámite.');
+        }
+      });
+
+      btnLimpiar.addEventListener('click', function() {
+        form.reset();
+        resultadoBox.hidden = true;
+        resultadoBox.className = 'resultado-box';
+        resultadoBox.innerHTML = '';
+        edadInput.focus();
+      });
+
+      function mostrarResultado(tipo, titulo, mensaje) {
+        resultadoBox.hidden = false;
+        resultadoBox.className = 'resultado-box ' + tipo;
+        resultadoBox.innerHTML =
+          '<div class="resultado-header">' +
+            (tipo === 'cumple' ? '✓ ' : (tipo === 'atencion' ? '⚠ ' : '✕ ')) +
+            titulo +
+          '</div>' +
+          '<div class="resultado-body">' + mensaje + '</div>' +
+          '<div class="resultado-disclaimer">Nota informativa: Este resultado es meramente orientativo y carece de validez legal. Los requisitos, convocatorias y trámites deben validarse directamente en <a href="https://jovenesconstruyendoelfuturo.stps.gob.mx/" target="_blank" rel="noopener noreferrer">jovenesconstruyendoelfuturo.stps.gob.mx</a>.</div>';
+
+        resultadoBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })();
+  </script>
+</body>
+</html>
+

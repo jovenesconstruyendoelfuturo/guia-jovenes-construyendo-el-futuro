@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jovenesconstruyendoelfuturo.github.io/guia-jovenes-construyendo-el-futuro/sitemap.xml

@@ -1,0 +1,588 @@
+/* ==========================================================================
+   Verificador de Requisitos - Jóvenes Construyendo el Futuro
+   Estilos CSS puros, accesibles, responsivos y sin librerías externas.
+   ========================================================================== */
+
+:root {
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --color-primary: #0284c7;
+  --color-primary-hover: #0369a1;
+  --color-accent: #0f766e;
+  --color-accent-light: #f0fdfa;
+  --banner-bg: #f1f5f9;
+  --banner-border: #94a3b8;
+  --success-bg: #f0fdf4;
+  --success-border: #86efac;
+  --success-text: #14532d;
+  --warning-bg: #fffbeb;
+  --warning-border: #fcd34d;
+  --warning-text: #78350f;
+  --error-bg: #fef2f2;
+  --error-border: #fca5a5;
+  --error-text: #7f1d1d;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --max-width: 860px;
+  --font-stack: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-stack);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Contenedor y estructura general
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+main.site-main {
+  flex: 1 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+}
+
+/* ==========================================================================
+   Avisos legales / Disclaimers (Superior e Inferior)
+   ========================================================================== */
+
+.disclaimer-banner {
+  background-color: var(--banner-bg);
+  border-bottom: 2px solid var(--banner-border);
+  padding: 0.85rem 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.disclaimer-banner.disclaimer-bottom {
+  border-top: 2px solid var(--banner-border);
+  border-bottom: none;
+  background-color: #f8fafc;
+  padding: 1.25rem 0;
+  margin-top: 2rem;
+}
+
+.disclaimer-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.5;
+}
+
+.disclaimer-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  color: #475569;
+}
+
+.disclaimer-banner a {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+  word-break: break-all;
+  font-weight: 600;
+}
+
+.disclaimer-banner a:hover,
+.disclaimer-banner a:focus-visible {
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   Cabecera de la página
+   ========================================================================== */
+
+.site-header {
+  padding: 2.25rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.badge-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  margin-bottom: 0.85rem;
+}
+
+.site-header h1 {
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0f172a;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.02em;
+}
+
+.site-header .lead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Tarjetas de contenido y secciones
+   ========================================================================== */
+
+.content-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.content-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.content-card h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  line-height: 1.35;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.6rem;
+}
+
+.content-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.content-card p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.content-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Herramienta: Verificador interactivo
+   ========================================================================== */
+
+.tool-card {
+  border-top: 5px solid var(--color-primary);
+  background: linear-gradient(to bottom, #ffffff, #fcfdfe);
+}
+
+.tool-intro {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.975rem;
+}
+
+.form-group {
+  margin-bottom: 1.35rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.975rem;
+  color: var(--text-main);
+  margin-bottom: 0.45rem;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 280px;
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-main);
+  background-color: #ffffff;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
+
+.form-hint {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.35rem;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease;
+}
+
+.radio-label:hover {
+  background-color: #f1f5f9;
+}
+
+.radio-label input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: var(--text-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+/* ==========================================================================
+   Caja de resultados del verificador
+   ========================================================================== */
+
+.resultado-box {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  border-width: 1.5px;
+  border-style: solid;
+  animation: fadeIn 0.25s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.resultado-box.cumple {
+  background-color: var(--success-bg);
+  border-color: var(--success-border);
+  color: var(--success-text);
+}
+
+.resultado-box.atencion {
+  background-color: var(--warning-bg);
+  border-color: var(--warning-border);
+  color: var(--warning-text);
+}
+
+.resultado-box.no-cumple {
+  background-color: var(--error-bg);
+  border-color: var(--error-border);
+  color: var(--error-text);
+}
+
+.resultado-header {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resultado-body {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+
+.resultado-disclaimer {
+  font-size: 0.8125rem;
+  font-style: italic;
+  border-top: 1px dashed currentColor;
+  padding-top: 0.5rem;
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   Sección explicativa y enlace editorial
+   ========================================================================== */
+
+.explainer-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.external-guide-notice {
+  background-color: var(--color-accent-light);
+  border-left: 4px solid var(--color-accent);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 1.5rem;
+  font-size: 0.975rem;
+}
+
+.external-guide-notice a {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.external-guide-notice a:hover,
+.external-guide-notice a:focus-visible {
+  color: #115e59;
+}
+
+/* ==========================================================================
+   Preguntas frecuentes (FAQ)
+   ========================================================================== */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background-color: #fafbfc;
+  padding: 1.1rem 1.25rem;
+}
+
+.faq-item h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.faq-item p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Sección de Prevención de Fraudes
+   ========================================================================== */
+
+.fraud-card {
+  border-top: 5px solid #dc2626;
+  background: #ffffff;
+}
+
+.fraud-alert-box {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.fraud-alert-box p {
+  color: #991b1b;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.security-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.security-points li {
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.security-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #059669;
+  font-weight: 800;
+}
+
+.security-points a {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* ==========================================================================
+   Pie de página
+   ========================================================================== */
+
+.site-footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin-bottom: 0.5rem;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer a {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #7dd3fc;
+}
+
+/* ==========================================================================
+   Accesibilidad y Estados de Foco
+   ========================================================================== */
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Responsividad móvil
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .content-card {
+    padding: 1.35rem 1rem;
+  }
+
+  .site-header {
+    padding: 1.5rem 0 1rem 0;
+  }
+
+  .form-input {
+    max-width: 100%;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .disclaimer-content {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}
+
